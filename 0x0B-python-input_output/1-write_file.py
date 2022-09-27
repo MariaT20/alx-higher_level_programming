@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""
-A mmodule that writes a string to a text file
-"""
+"""Module to write to a file"""
 
 
 def write_file(filename="", text=""):
-    """
-    Writes a string to a text file (UTF8)
-    Returns the number of characters written
-    """
-    with open(filename, "w", encoding="utf-8") as fn:
+    '''Writes a string to text file and returns string length'''
+    with open(filename, 'w', encoding="utf-8") as f:
         for char in text:
-            fn.write(char)
-            return len(text)
+            f.write(char)
+    return len(text)
